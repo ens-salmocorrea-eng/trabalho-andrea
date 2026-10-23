@@ -30,6 +30,7 @@ a:focus-visible {
   padding: 18px 32px;
   background: #14532d;
   color: #fff;
+  border-radius: 30px;
 }
 
 .logo {
@@ -61,6 +62,7 @@ a:focus-visible {
 .produtos {
   padding: 56px 24px;
   background: #eef2ec;
+  border-radius: 30px;
 }
 
 .produtos-titulo {
@@ -80,8 +82,9 @@ a:focus-visible {
 .produto {
   background: #fff;
   border: 1px solid #c5cfc2;
-  border-radius: 4px;
+  border-radius: 30px;
   padding: 24px;
+  
 }
 
 .produto-imagem {
@@ -89,7 +92,7 @@ a:focus-visible {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 30px;
   margin-bottom: 14px;
   background: #dfe5dc;
 }
@@ -108,6 +111,7 @@ a:focus-visible {
   padding: 64px 24px;
   background: #f2c230;
   color: #1a1a1a;
+  border-radius: 30px;
 }
 
 .chamada-conteudo {
@@ -132,7 +136,7 @@ a:focus-visible {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 30px;
 }
 
 .chamada-botao:hover {
@@ -143,12 +147,109 @@ a:focus-visible {
   outline-color: #1a1a1a;
 }
 
+.duvidas {
+  padding: 56px 24px;
+  background: #eef2ec;
+  border-radius: 30px;
+}
+
+.duvidas-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.duvidas h2,
+.localizacao h2 {
+  margin: 0 0 24px;
+  font-size: 1.8rem;
+}
+
+.duvida {
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #c5cfc2;
+  border-radius: 30px;
+}
+
+.duvida + .duvida {
+  margin-top: 12px;
+}
+
+.duvida summary {
+  color: #14532d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.duvida summary:focus-visible {
+  outline: 3px solid #f2c230;
+  outline-offset: 4px;
+}
+
+.duvida p {
+  margin: 12px 0 0;
+}
+
+.localizacao {
+  padding: 56px 24px;
+}
+
+.localizacao > h2,
+.localizacao-conteudo {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.localizacao-conteudo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 32px;
+}
+
+.mapa {
+  overflow: hidden;
+  min-height: 240px;
+  border: 1px solid #c5cfc2;
+  border-radius: 20px;
+}
+
+.mapa iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  min-height: 240px;
+  border: 0;
+}
+
+.localizacao-endereco {
+  font-style: normal;
+}
+
+.localizacao-endereco h3 {
+  margin: 0 0 12px;
+  color: #14532d;
+  font-size: 1.4rem;
+}
+
+.localizacao-endereco p {
+  margin: 0 0 10px;
+}
+
+.localizacao-endereco p.localizacao-aviso {
+  margin-top: 18px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
 .rodape {
   padding: 20px;
   text-align: center;
   font-size: 0.9rem;
   background: #1a1a1a;
   color: #ccc;
+  border-radius: 30px;
 }
 
 .rodape p {
@@ -204,5 +305,29 @@ a:focus-visible {
   .chamada-botao {
     display: block;
     padding: 16px;
+  }
+
+  .duvidas,
+  .localizacao {
+    padding: 40px 20px;
+  }
+
+  .duvidas h2,
+  .localizacao h2 {
+    font-size: 1.5rem;
+  }
+
+  .duvida {
+    padding: 16px;
+  }
+
+  .localizacao-conteudo {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mapa,
+  .mapa iframe {
+    min-height: 220px;
   }
 }
